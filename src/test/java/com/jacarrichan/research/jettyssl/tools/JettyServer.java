@@ -46,7 +46,7 @@ public class JettyServer {
         cf.setKeyStore(jetty_home + "jetty-keystore");
         cf.setKeyStorePassword("OBF:19iy19j019j219j419j619j8");
         cf.setKeyManagerPassword("OBF:19iy19j019j219j419j619j8");
-        server.setConnectors(new Connector[] { ssl_connector });
+        server.addConnector(ssl_connector);
         // ---
         return server;
     }
